@@ -1,9 +1,9 @@
 <template>
     <span>
     <el-menu class="el-menu-demo" mode="horizontal">
-        <el-submenu v-for="item of appmenu" :index="item.index">
+        <el-submenu v-for="item of appmenu" :key="item.index">
             <template slot="title">{{item.title}}</template>
-            <el-menu-item v-for="subitem of item.subitems" :index="subitem.index">
+            <el-menu-item v-for="(subitem) of item.subitems" :key="subitem.index">
                 {{subitem.title}}
             </el-menu-item>
 
